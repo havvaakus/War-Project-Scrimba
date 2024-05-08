@@ -1,4 +1,4 @@
-/* html, body {
+html, body {
     margin: 0;
     padding: 0;
     background-image: url("img/table.png");
@@ -31,7 +31,7 @@ button.draw {
     align-self: stretch;
 }
 
-div.card-slot {
+/* div.card-slot {
     border: 1px solid black;
     border-radius: 5px;
     height: 120px;
