@@ -5,6 +5,7 @@ const newDeckBtn = document.getElementById("new-deck")
 const drawCardBtn = document.getElementById("draw-cards")
 const cardsContainer = document.getElementById("cards")
 const header = document.getElementById("header")
+const remainingText = document.getElementById("remaining")
 const computerScoreEl = document.getElementById("computer-score")
 const myScoreEl = document.getElementById("my-score")
 
@@ -14,7 +15,7 @@ function handleClick() {
         .then(data => {
             remainingText.textContent = `Remaining cards: ${data.remaining}`
             deckId = data.deck_id
-            console.log(deckId)
+            console.log (deckId)
         })
 }
 
@@ -34,15 +35,14 @@ drawCardBtn.addEventListener("click", () => {
             const winnerText = determineCardWinner(data.cards[0], data.cards[1])
             header.textContent = winnerText
 
-            //Make draw button when remaining equal zero
             if (data.remaining === 0) {
                 drawCardBtn.disabled = true
                 if (computerScore > myScore) {
-                    header.textContent = "The computer won the game!"
+                    header.textContent = "The computer won the game !"
                 } else if (computerScore < myScore) {
-                    header.textContent = "You won the game!"
+                    header.textContent = "You won the game !"
                 } else {
-                    header.textContent = "It's a tie game!"
+                    header.textContent = "It's a tie game !"
                 }
             }
         })
