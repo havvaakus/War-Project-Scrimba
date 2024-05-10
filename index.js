@@ -1,8 +1,12 @@
 let deckId
+let computerScore = 0
+let myScore = 0
 const newDeckBtn = document.getElementById("new-deck")
 const drawCardBtn = document.getElementById("draw-cards")
 const cardsContainer = document.getElementById("cards")
 const header = document.getElementById("header")
+const computerScoreEl = document.getElementById("computer-score")
+const myScoreEl = document.getElementById("my-score")
 
 function handleClick() {
     fetch("https://apis.scrimba.com/deckofcards/api/deck/new/shuffle/")
