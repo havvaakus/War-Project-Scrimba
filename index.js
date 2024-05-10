@@ -37,6 +37,13 @@ drawCardBtn.addEventListener("click", () => {
             //Make draw button when remaining equal zero
             if (data.remaining === 0) {
                 drawCardBtn.disabled = true
+                if (computerScore > myScore) {
+                    header.textContent = "The computer won the game!"
+                } else if (computerScore < myScore) {
+                    header.textContent = "You won the game!"
+                } else {
+                    header.textContent = "It's a tie game!"
+                }
             }
         })
 })
