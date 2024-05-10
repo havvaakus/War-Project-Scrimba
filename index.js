@@ -29,6 +29,11 @@ drawCardBtn.addEventListener("click", () => {
             `
             const winnerText = determineCardWinner(data.cards[0], data.cards[1])
             header.textContent = winnerText
+
+            //Make draw button when remaining equal zero
+            if (data.remaining === 0) {
+                drawCardBtn.disabled = true
+            }
         })
 })
 
