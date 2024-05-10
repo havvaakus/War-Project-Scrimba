@@ -10,6 +10,7 @@ function handleClick() {
         .then(data => {
             console.log(data)
             deckId = data.deck_id
+            console.log(deckId)
         })
 }
 newDeckBtn.addEventListener("click", handleClick)
@@ -25,6 +26,8 @@ drawCardBtn.addEventListener("click", () => {
             document.getElementById("cards").children[1].innerHTML = `
                 <img src= ${data.cards[1].image} class="card"/>
             `
+            const winnerText = determineCardWinner(data.cards[0], data.cards[1])
+            header.textContent = winnerText
         })
 })
 
