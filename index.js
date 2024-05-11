@@ -38,6 +38,7 @@ drawCardBtn.addEventListener("click", () => {
 
             if (data.remaining === 0) {
                 drawCardBtn.disabled = true
+                //Display the final winner 
                 if (computerScore > myScore) {
                     header.textContent = "The computer won the game !"
                 } else if (computerScore < myScore) {
